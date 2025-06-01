@@ -1,0 +1,152 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 8px 8px 24px rgba(66, 68, 90, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Form heading */
+.container h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Form fields */
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.container div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.container input {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+}
+
+.container input::placeholder {
+  font-size: 14px;
+  font-style: italic;
+}
+
+button {
+  background-color: purple;
+  border: none;
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+  padding: 12px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+span {
+  font-size: 14px;
+  text-align: center;
+}
+
+span a {
+  color: purple;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+/* === Responsive Breakpoints === */
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 16px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .container h1 {
+    font-size: 24px;
+  }
+
+  label,
+  .container input,
+  button {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
+
+/* 🧾 Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .container {
+    max-width: 600px;
+    padding: 40px;
+  }
+
+  .container h1 {
+    font-size: 30px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+}
+
+/* 🖥️ Desktop */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 700px;
+    padding: 48px;
+  }
+
+  .container h1 {
+    font-size: 32px;
+  }
+
+  button {
+    font-size: 22px;
+  }
+}
